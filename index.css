@@ -11,6 +11,21 @@ body, html {
     background: #7dc444;
 }
 
+#google_translate_element {
+    position: absolute;
+    top: 20px; /* Ajuste a posição conforme necessário */
+    right: 20px; /* Ajuste a posição conforme necessário */
+    z-index: 10; /* Garantir que fique acima do conteúdo */
+}
+
+#google_translate_element select {
+    background-color: #fff; /* Cor de fundo do seletor */
+    color: #333; /* Cor do texto */
+    border: 1px solid #ccc; /* Borda do seletor */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 5px; /* Espaçamento interno */
+}
+
 .overlay {
     background-image: url('headerheader_img.jpg');
     background-size: cover;
