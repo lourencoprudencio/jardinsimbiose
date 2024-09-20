@@ -7,18 +7,28 @@
     <title>JardimSimbiose</title>
     <link rel="icon" href="logo_jardinsimbiose.png" type="image/png">
     <link rel="stylesheet" href="inicio.css">
-    <script src="inicio.js" defer></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,es,fr,de',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
 </head>
 <body>
     <header class="main-header" id="mainHeader">
         <img src="logo_jardinsimbiose.png" alt="Logotipo JardimSimbiose" class="logo">
         <nav class="nav-bar">
             <ul>
-                <li><a href="#inicio">Início</a></li>
+                <li><a href="inicio.html">Início</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#contactos">Contactos</a></li>
                 <li><a href="#portefolio">Portefólio</a></li>
                 <li><a href="#dicas">Dicas de Jardinagem</a></li>
+                <li><a href="#orcamento" class="orcamento-button">Orçamento</a></li> <!-- Botão Orçamento -->
             </ul>
         </nav>
     </header>
@@ -27,11 +37,13 @@
         <div class="hero-content">
             <h1>Bem-vindo à JardimSimbiose</h1>
             <p>Soluções sustentáveis e inovadoras para o seu jardim</p>
+            <div id="google_translate_element" style="margin-top: 20px;"></div> <!-- Botão da API -->
+            <a href="#orcamento" class="btn-orcamento">Solicitar Orçamento</a> <!-- Botão estilizado -->
         </div>
     </section>
 
     <section class="parcerias" id="parcerias">
-        <h2>Nossas Parcerias</h2>
+        <h2>Parcerias</h2>
         <div class="parcerias-container">
             <div class="parceria">
                 <a href="https://example-ghe.com" target="_blank">
