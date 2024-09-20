@@ -45,22 +45,48 @@ body, html {
 .header-container {
     margin-bottom: 50px;
     animation: fadeInDown 2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens */
 }
 
-.content h1 {
+.header-container h1 {
     font-size: 3rem;
     color: #fff;
     margin-bottom: 20px;
     animation: fadeIn 3s ease-in-out;
+    text-align: center; /* Centraliza o texto */
 }
 
-.content p {
+.header-container p {
     font-size: 1.2rem;
     color: #fff;
     margin-bottom: 20px;
     max-width: 600px;
     line-height: 1.6;
     animation: fadeIn 4s ease-in-out;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Botão Espreitar */
+.btn-espreitar {
+    padding: 15px 30px;
+    background-color: #7dc444;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 4.5s ease-in-out;
+    display: inline-block; /* Garante que o botão seja tratado como um bloco inline */
+    margin-top: 20px; /* Adiciona espaçamento acima do botão */
+}
+
+.btn-espreitar:hover {
+    background-color: #68a935;
+    transform: scale(1.05);
 }
 
 footer {
@@ -70,6 +96,7 @@ footer {
     color: #fff;
     text-align: center;
     animation: fadeIn 5s ease-in-out;
+    background-color: transparent; /* Remove o fundo verde */
 }
 
 /* Animações */

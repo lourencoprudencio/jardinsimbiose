@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+header.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+header.main-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo {
+    width: 120px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar ul li {
+    margin: 0;
+}
+
+.nav-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+    background-color: #fff;
+    color: #7dc444;
+}
+
+.hero {
+    background-image: url('header_img.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.parcerias {
+    padding: 50px 20px;
+    background-color: #fff;
+    color: #7dc444;
+    text-align: center;
+}
+
+.parcerias h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.parcerias-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.parceria {
+    text-align: center;
+}
+
+.parceria a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.parceria img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.parceria p {
+    font-size: 1.2rem;
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #7dc444; /* Removido o fundo verde */
+}
