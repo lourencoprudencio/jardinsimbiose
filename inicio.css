@@ -129,3 +129,49 @@ footer {
     width: 100%;
     background-color: #7dc444; /* Removido o fundo verde */
 }
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-bar ul li {
+        margin: 10px 0; /* Espaçamento entre os links do menu */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Tamanho menor em telas pequenas */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Tamanho menor em telas pequenas */
+    }
+
+    .parcerias h2 {
+        font-size: 2rem; /* Tamanho menor em telas pequenas */
+    }
+
+    .parcerias-container {
+        flex-direction: column; /* Coloca as parcerias em coluna em telas pequenas */
+    }
+
+    .parceria img {
+        width: 120px; /* Tamanho menor em telas pequenas */
+    }
+
+    .parceria p {
+        font-size: 1rem; /* Tamanho menor em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem; /* Tamanho ainda menor em telas muito pequenas */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Tamanho ainda menor em telas muito pequenas */
+    }
+}
