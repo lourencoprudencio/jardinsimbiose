@@ -1,0 +1,98 @@
+* {
+    margin: 0; /* Reset default margin for all elements */
+    padding: 0; /* Reset default padding for all elements */
+    box-sizing: border-box; /* Set box model to include padding and border in element's total width and height */
+}
+
+body, html {
+    height: 100%; /* Set height to 100% for body and html to cover the entire viewport */
+    font-family: 'Arial', sans-serif; /* Use Arial font for text */
+    color: #333; /* Set default text color to a dark gray */
+    background-image: url('background_contactos.jpg'); /* Set a grass image as the background */
+    background-size: cover; /* Ensure the background image covers the entire area */
+    background-position: center; /* Center the background image */
+}
+
+.main-header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly with space between them */
+    align-items: center; /* Align items vertically centered */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for the header */
+    padding: 15px 20px; /* Add padding to the header */
+    position: fixed; /* Fix the header to the top of the viewport */
+    width: 100%; /* Set width to 100% to span the entire width */
+    top: 0; /* Position at the top of the viewport */
+    z-index: 10; /* Set z-index to ensure it appears above other elements */
+    transition: background-color 0.3s ease; /* Smooth transition for background color changes */
+}
+
+.logo {
+    width: 120px; /* Set logo width */
+}
+
+.nav-bar ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    display: flex; /* Use flexbox for the navigation items */
+    gap: 20px; /* Add space between navigation items */
+}
+
+.nav-bar ul li a {
+    color: #fff; /* Set text color of links to white */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.1rem; /* Set font size for links */
+}
+
+.contact-section {
+    padding: 120px 20px; /* Add padding to the contact section for spacing */
+    text-align: center; /* Center align text in the section */
+}
+
+.contact-section h2 {
+    font-size: 2.5rem; /* Set font size for the section heading */
+    margin-bottom: 40px; /* Add margin below the heading for spacing */
+    color: #fff; /* Set heading text color to white */
+}
+
+.contact-info {
+    margin: 30px 0; /* Add margin above and below each contact info block */
+}
+
+.contact-info h3 {
+    font-size: 1.5rem; /* Set font size for contact info subheadings */
+    color: #fff; /* Set subheading text color to white */
+}
+
+.contact-info p {
+    font-size: 1.2rem; /* Set font size for paragraphs in contact info */
+    color: #fff; /* Set paragraph text color to white */
+}
+
+footer {
+    color: #fff; /* Set footer text color to white */
+    text-align: center; /* Center align text in the footer */
+    padding: 10px 0; /* Add vertical padding in the footer */
+    position: relative; /* Set position relative for footer */
+    bottom: 0; /* Position at the bottom of the containing block */
+    width: 100%; /* Set footer width to 100% */
+    background-color: transparent; /* Semi-transparent background color for the footer */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column; /* Stack navigation items vertically on small screens */
+        align-items: center; /* Center align items in the column */
+    }
+
+    .contact-section h2 {
+        font-size: 2rem; /* Reduce heading size on small screens */
+    }
+
+    .contact-info h3 {
+        font-size: 1.2rem; /* Reduce subheading size on small screens */
+    }
+
+    .contact-info p {
+        font-size: 1rem; /* Reduce paragraph text size on small screens */
+    }
+}

@@ -1,136 +1,136 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Remove default margin from all elements */
+    padding: 0; /* Remove default padding from all elements */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 body, html {
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-    background: #7dc444;
+    height: 100%; /* Set full height for body and html */
+    font-family: 'Arial', sans-serif; /* Set font family */
+    color: #fff; /* Set text color to white */
+    background: #7dc444; /* Set background color */
 }
 
 #google_translate_element {
-    position: absolute;
-    top: 20px; /* Ajuste a posição conforme necessário */
-    right: 20px; /* Ajuste a posição conforme necessário */
-    z-index: 10; /* Garantir que fique acima do conteúdo */
+    position: absolute; /* Position the translation element absolutely */
+    top: 20px; /* Adjust the position from the top */
+    right: 20px; /* Adjust the position from the right */
+    z-index: 10; /* Ensure it is above other content */
 }
 
 #google_translate_element select {
-    background-color: #fff; /* Cor de fundo do seletor */
-    color: #333; /* Cor do texto */
-    border: 1px solid #ccc; /* Borda do seletor */
-    border-radius: 5px; /* Cantos arredondados */
-    padding: 5px; /* Espaçamento interno */
+    background-color: #fff; /* Set background color for the selector */
+    color: #333; /* Set text color for the selector */
+    border: 1px solid #ccc; /* Set border for the selector */
+    border-radius: 5px; /* Round corners of the selector */
+    padding: 5px; /* Add internal spacing */
 }
 
 .overlay {
-    background-image: url('headerheader_img.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
+    background-image: url('header_img.jpg'); /* Set background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Set full viewport height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add padding */
+    position: relative; /* Set relative positioning */
+    z-index: 1; /* Set stacking order */
 }
 
 .overlay::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Sombra escura para destaque */
-    z-index: -1;
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Position it absolutely within the overlay */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark shadow for emphasis */
+    z-index: -1; /* Place behind the overlay content */
 }
 
 .logo {
-    width: 150px;
-    margin-bottom: 20px;
+    width: 150px; /* Set logo width */
+    margin-bottom: 20px; /* Add bottom margin */
 }
 
 .header-container {
-    margin-bottom: 50px;
-    animation: fadeInDown 2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza os itens */
+    margin-bottom: 50px; /* Add bottom margin */
+    animation: fadeInDown 2s ease-in-out; /* Add fade-in animation */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items */
 }
 
 .header-container h1 {
-    font-size: 3rem;
-    color: #fff;
-    margin-bottom: 20px;
-    animation: fadeIn 3s ease-in-out;
-    text-align: center; /* Centraliza o texto */
+    font-size: 3rem; /* Set font size for heading */
+    color: #fff; /* Set text color to white */
+    margin-bottom: 20px; /* Add bottom margin */
+    animation: fadeIn 3s ease-in-out; /* Add fade-in animation */
+    text-align: center; /* Center the text */
 }
 
 .header-container p {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-bottom: 20px;
-    max-width: 600px;
-    line-height: 1.6;
-    animation: fadeIn 4s ease-in-out;
-    text-align: center; /* Centraliza o texto */
+    font-size: 1.2rem; /* Set font size for paragraph */
+    color: #fff; /* Set text color to white */
+    margin-bottom: 20px; /* Add bottom margin */
+    max-width: 600px; /* Set maximum width */
+    line-height: 1.6; /* Set line height for readability */
+    animation: fadeIn 4s ease-in-out; /* Add fade-in animation */
+    text-align: center; /* Center the text */
 }
 
-/* Botão Espreitar */
+/* Button for "Espreitar" */
 .btn-espreitar {
-    padding: 15px 30px;
-    background-color: #7dc444;
-    color: #fff;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 4.5s ease-in-out;
-    display: inline-block; /* Garante que o botão seja tratado como um bloco inline */
-    margin-top: 20px; /* Adiciona espaçamento acima do botão */
+    padding: 15px 30px; /* Add padding */
+    background-color: #7dc444; /* Set background color */
+    color: #fff; /* Set text color to white */
+    font-size: 1.2rem; /* Set font size */
+    border: none; /* Remove border */
+    border-radius: 30px; /* Round corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    animation: fadeIn 4.5s ease-in-out; /* Add fade-in animation */
+    display: inline-block; /* Treat button as inline-block */
+    margin-top: 20px; /* Add top margin */
 }
 
 .btn-espreitar:hover {
-    background-color: #68a935;
-    transform: scale(1.05);
+    background-color: #68a935; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
 
 footer {
-    position: absolute;
-    bottom: 20px;
-    font-size: 0.8rem;
-    color: #fff;
-    text-align: center;
-    animation: fadeIn 5s ease-in-out;
-    background-color: transparent; /* Remove o fundo verde */
+    position: absolute; /* Position the footer absolutely */
+    bottom: 20px; /* Position it 20px from the bottom */
+    font-size: 0.8rem; /* Set font size */
+    color: #fff; /* Set text color to white */
+    text-align: center; /* Center the text */
+    animation: fadeIn 5s ease-in-out; /* Add fade-in animation */
+    background-color: transparent; /* Remove background color */
 }
 
-/* Animações */
+/* Animations */
 @keyframes fadeInDown {
     from {
-        opacity: 0;
-        transform: translateY(-50px);
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(-50px); /* Move upwards */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* Return to original position */
     }
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0;
+        opacity: 0; /* Start fully transparent */
     }
     to {
-        opacity: 1;
+        opacity: 1; /* End fully visible */
     }
 }

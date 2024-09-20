@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt"> <!-- Set the language of the document to Portuguese -->
+<head>
+    <meta charset="UTF-8"> <!-- Specify the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make the page responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensure compatibility with Internet Explorer -->
+    <title>Contactos - JardimSimbiose</title> <!-- Title of the webpage displayed in the browser tab -->
+    <link rel="icon" href="logo_jardinsimbiose.png" type="image/png"> <!-- Set the favicon for the page -->
+    <link rel="stylesheet" href="inicio.css"> <!-- Link to the main stylesheet for consistent styling -->
+    <link rel="stylesheet" href="contactos.css"> <!-- Link to an additional stylesheet specifically for the contacts page -->
+    
+    <!-- Google Translate API script for language translation functionality -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt', // Set the default language of the page to Portuguese
+                includedLanguages: 'en,es,fr,de', // Languages supported for translation: English, Spanish, French, German
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE // Use simple inline layout for translation element
+            }, 'google_translate_element'); // Specify the element to initialize the translation
+        }
+    </script>
+</head>
+<body>
+    <header class="main-header" id="mainHeader"> <!-- Header section containing the logo and navigation -->
+        <img src="logo_jardinsimbiose.png" alt="Logotipo JardimSimbiose" class="logo"> <!-- Logo image with alt text for accessibility -->
+        <nav class="nav-bar"> <!-- Navigation bar for site links -->
+            <ul> <!-- Unordered list for navigation items -->
+                <li><a href="inicio.html">Início</a></li> <!-- Link to the homepage -->
+                <li><a href="#servicos">Serviços</a></li> <!-- Link to services section -->
+                <li><a href="#contactos">Contactos</a></li> <!-- Link to the current contacts section -->
+                <li><a href="#portefolio">Portefólio</a></li> <!-- Link to portfolio section -->
+                <li><a href="#dicas">Dicas de Jardinagem</a></li> <!-- Link to gardening tips section -->
+                <li><a href="#orcamento" class="orcamento-button">Orçamento</a></li> <!-- Link to budget section with additional class for styling -->
+            </ul>
+        </nav>
+        <div id="google_translate_element" style="position: absolute; top: 15px; right: 20px; z-index: 10;"></div> <!-- Div for the Google Translate element positioned in the header -->
+    </header>
+
+    <section class="contact-section" id="contactos"> <!-- Section for contact information -->
+        <h2>Contactos</h2> <!-- Main heading for the contact section -->
+        <div class="contact-info"> <!-- Contact information block -->
+            <h3>Apoio ao cliente:</h3> <!-- Subheading for customer support -->
+            <p>Artur Prudêncio</p> <!-- Name of the customer support contact -->
+            <p>(+351) 960 366 905</p> <!-- Phone number for customer support -->
+        </div>
+        <div class="contact-info"> <!-- Another contact information block -->
+            <h3>Departamento Comercial:</h3> <!-- Subheading for the commercial department -->
+            <p>Ana Sofia Prudêncio</p> <!-- Name of the commercial department contact -->
+            <p>(+351) 929 175 444</p> <!-- Phone number for the commercial department -->
+        </div>
+        <div class="contact-info"> <!-- Another contact information block -->
+            <h3>Departamento Informático:</h3> <!-- Subheading for the IT department -->
+            <p>Lourenço Prudêncio</p> <!-- Name of the IT department contact -->
+            <p>(+351) 934 883 144</p> <!-- Phone number for the IT department -->
+        </div>
+        <div class="contact-info"> <!-- Final contact information block -->
+            <h3>E-mail de suporte:</h3> <!-- Subheading for support email -->
+            <p>jardinsimbiose@gmail.com</p> <!-- Support email address -->
+        </div>
+    </section>
+
+    <footer> <!-- Footer section of the page -->
+        <p>&copy; 2024 JardimSimbiose. Todos os direitos reservados.</p> <!-- Copyright notice -->
+    </footer>
+</body>
+</html>

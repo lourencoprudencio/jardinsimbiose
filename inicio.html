@@ -1,79 +1,80 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt"> <!-- Declare the document type and set the language to Portuguese -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JardimSimbiose</title>
-    <link rel="icon" href="logo_jardinsimbiose.png" type="image/png">
-    <link rel="stylesheet" href="inicio.css">
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <meta charset="UTF-8"> <!-- Set character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Set viewport for responsive design -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensure compatibility with Internet Explorer -->
+    <title>JardimSimbiose</title> <!-- Set the title of the webpage -->
+    <link rel="icon" href="logo_jardinsimbiose.png" type="image/png"> <!-- Link to the favicon -->
+    <link rel="stylesheet" href="inicio.css"> <!-- Link to the external CSS file -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> <!-- Link to Google Translate API -->
     <script>
         function googleTranslateElementInit() {
+            // Initialize the Google Translate Element
             new google.translate.TranslateElement({
-                pageLanguage: 'pt',
-                includedLanguages: 'en,es,fr,de',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
+                pageLanguage: 'pt', // Set the original page language to Portuguese
+                includedLanguages: 'en,es,fr,de', // Languages supported for translation
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE // Simple inline layout
+            }, 'google_translate_element'); // Target element for the translation
         }
     </script>
 </head>
 <body>
-    <header class="main-header" id="mainHeader">
-        <img src="logo_jardinsimbiose.png" alt="Logotipo JardimSimbiose" class="logo">
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="inicio.html">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contactos">Contactos</a></li>
-                <li><a href="#portefolio">Portefólio</a></li>
-                <li><a href="#dicas">Dicas de Jardinagem</a></li>
-                <li><a href="#orcamento" class="orcamento-button">Orçamento</a></li> <!-- Botão Orçamento -->
+    <header class="main-header" id="mainHeader"> <!-- Main header section -->
+        <img src="logo_jardinsimbiose.png" alt="Logotipo JardimSimbiose" class="logo"> <!-- Logo image -->
+        <nav class="nav-bar"> <!-- Navigation bar -->
+            <ul> <!-- Unordered list for navigation items -->
+                <li><a href="inicio.html">Início</a></li> <!-- Link to home -->
+                <li><a href="#servicos">Serviços</a></li> <!-- Link to services section -->
+                <li><a href="contactos.html">Contactos</a></li> <!-- Link to contacts section -->
+                <li><a href="#portefolio">Portefólio</a></li> <!-- Link to portfolio section -->
+                <li><a href="#dicas">Dicas de Jardinagem</a></li> <!-- Link to gardening tips section -->
+                <li><a href="#orcamento" class="orcamento-button">Orçamento</a></li> <!-- Link to budget section with a specific class -->
             </ul>
         </nav>
     </header>
 
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h1>Bem-vindo à JardimSimbiose</h1>
-            <p>Soluções sustentáveis e inovadoras para o seu jardim</p>
-            <div id="google_translate_element" style="margin-top: 20px;"></div> <!-- Botão da API -->
-            <a href="#orcamento" class="btn-orcamento">Solicitar Orçamento</a> <!-- Botão estilizado -->
+    <section class="hero" id="inicio"> <!-- Hero section -->
+        <div class="hero-content"> <!-- Content within the hero section -->
+            <h1>Bem-vindo à JardimSimbiose</h1> <!-- Main heading -->
+            <p>Soluções sustentáveis e inovadoras para o seu jardim</p> <!-- Subheading or description -->
+            <div id="google_translate_element" style="margin-top: 20px;"></div> <!-- Google Translate button area -->
+            <a href="#orcamento" class="btn-orcamento">Solicitar Orçamento</a> <!-- Styled button for requesting a quote -->
         </div>
     </section>
 
-    <section class="parcerias" id="parcerias">
-        <h2>Parcerias</h2>
-        <div class="parcerias-container">
-            <div class="parceria">
-                <a href="https://example-ghe.com" target="_blank">
-                    <img src="ghe_logo.jpg" alt="GHE">
-                    <p>GHE</p>
+    <section class="parcerias" id="parcerias"> <!-- Partnerships section -->
+        <h2>Parcerias</h2> <!-- Heading for partnerships -->
+        <div class="parcerias-container"> <!-- Container for partnership items -->
+            <div class="parceria"> <!-- Individual partnership item -->
+                <a href="https://example-ghe.com" target="_blank"> <!-- Link to GHE -->
+                    <img src="ghe_logo.jpg" alt="GHE"> <!-- GHE logo image -->
+                    <p>GHE</p> <!-- Partnership name -->
                 </a>
             </div>
-            <div class="parceria">
-                <a href="https://example-ecofree.com" target="_blank">
-                    <img src="ecofree.jpg" alt="EcoFree">
-                    <p>EcoFree</p>
+            <div class="parceria"> <!-- Individual partnership item -->
+                <a href="https://example-ecofree.com" target="_blank"> <!-- Link to EcoFree -->
+                    <img src="ecofree.jpg" alt="EcoFree"> <!-- EcoFree logo image -->
+                    <p>EcoFree</p> <!-- Partnership name -->
                 </a>
             </div>
-            <div class="parceria">
-                <a href="https://example-pessoaldalimpeza.com" target="_blank">
-                    <img src="pessoaldalimpeza_logo.jpg" alt="Pessoal da Limpeza">
-                    <p>Pessoal da Limpeza</p>
+            <div class="parceria"> <!-- Individual partnership item -->
+                <a href="https://example-pessoaldalimpeza.com" target="_blank"> <!-- Link to Pessoal da Limpeza -->
+                    <img src="pessoaldalimpeza_logo.jpg" alt="Pessoal da Limpeza"> <!-- Pessoal da Limpeza logo image -->
+                    <p>Pessoal da Limpeza</p> <!-- Partnership name -->
                 </a>
             </div>
-            <div class="parceria">
-                <a href="https://example-piscinasdalinha.com" target="_blank">
-                    <img src="piscinas_logo.jpg" alt="Piscinas da Linha">
-                    <p>Piscinas da Linha</p>
+            <div class="parceria"> <!-- Individual partnership item -->
+                <a href="https://example-piscinasdalinha.com" target="_blank"> <!-- Link to Piscinas da Linha -->
+                    <img src="piscinas_logo.jpg" alt="Piscinas da Linha"> <!-- Piscinas da Linha logo image -->
+                    <p>Piscinas da Linha</p> <!-- Partnership name -->
                 </a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 JardimSimbiose. Todos os direitos reservados.</p>
+    <footer> <!-- Footer section -->
+        <p>&copy; 2024 JardimSimbiose. Todos os direitos reservados.</p> <!-- Copyright text -->
     </footer>
 </body>
 </html>
