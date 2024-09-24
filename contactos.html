@@ -8,18 +8,6 @@
     <link rel="icon" href="logo_jardinsimbiose.png" type="image/png"> <!-- Set the favicon for the page -->
     <link rel="stylesheet" href="inicio.css"> <!-- Link to the main stylesheet for consistent styling -->
     <link rel="stylesheet" href="contactos.css"> <!-- Link to an additional stylesheet specifically for the contacts page -->
-    
-    <!-- Google Translate API script for language translation functionality -->
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'pt', // Set the default language of the page to Portuguese
-                includedLanguages: 'en,es,fr,de', // Languages supported for translation: English, Spanish, French, German
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE // Use simple inline layout for translation element
-            }, 'google_translate_element'); // Specify the element to initialize the translation
-        }
-    </script>
 </head>
 <body>
     <header class="main-header" id="mainHeader"> <!-- Header section containing the logo and navigation -->
@@ -34,7 +22,6 @@
                 <li><a href="#orcamento" class="orcamento-button">Orçamento</a></li> <!-- Link to budget section with additional class for styling -->
             </ul>
         </nav>
-        <div id="google_translate_element" style="position: absolute; top: 15px; right: 20px; z-index: 10;"></div> <!-- Div for the Google Translate element positioned in the header -->
     </header>
 
     <section class="contact-section" id="contactos"> <!-- Section for contact information -->
