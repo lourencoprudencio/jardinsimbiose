@@ -1,108 +1,151 @@
+/* Resetting default margins and paddings */
 * {
-    margin: 0; /* Reset default margin for all elements */
-    padding: 0; /* Reset default padding for all elements */
-    box-sizing: border-box; /* Set box model to include padding and border in element's total width and height */
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
 
+/* Setting styles for the body and html elements */
 body, html {
-    height: 100%; /* Set height to 100% for body and html to cover the entire viewport */
-    font-family: 'Arial', sans-serif; /* Use Arial font for text */
-    color: #333; /* Set default text color to a dark gray */
-    background-image: url('background_contactos.jpg'); /* Set a grass image as the background */
-    background-size: cover; /* Ensure the background image covers the entire area */
-    background-position: center; /* Center the background image */
+    height: 100%; /* Sets the height of the body and html to fill the viewport */
+    font-family: 'Arial', sans-serif; /* Sets the font to Arial or a generic sans-serif fallback */
+    color: #fff; /* Sets the text color to white */
 }
 
-.main-header {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space items evenly with space between them */
-    align-items: center; /* Align items vertically centered */
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for the header */
-    padding: 15px 20px; /* Add padding to the header */
-    position: fixed; /* Fix the header to the top of the viewport */
-    width: 100%; /* Set width to 100% to span the entire width */
-    top: 0; /* Position at the top of the viewport */
-    z-index: 10; /* Set z-index to ensure it appears above other elements */
+/* Main header styles (same as in the main page) */
+header.main-header {
+    display: flex; /* Uses flexbox layout for the header */
+    justify-content: space-between; /* Distributes space between child elements */
+    align-items: center; /* Centers child elements vertically */
+    background-color: transparent; /* Sets the initial background color to transparent */
+    padding: 15px 20px; /* Adds padding around the header */
+    position: fixed; /* Fixes the header at the top of the viewport */
+    width: 100%; /* Sets the header width to 100% of the viewport */
+    top: 0; /* Positions the header at the top */
+    z-index: 10; /* Ensures the header is above other elements */
     transition: background-color 0.3s ease; /* Smooth transition for background color changes */
 }
 
+header.main-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Changes background color when scrolled */
+}
+
 .logo {
-    width: 120px; /* Set logo width */
+    width: 120px; /* Sets the width of the logo */
+    transition: transform 0.3s ease; /* Smooth transition for transformations */
+}
+
+.menu-toggle {
+    display: flex; /* Uses flexbox layout for the menu toggle */
+    flex-direction: column; /* Stacks child elements vertically */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    z-index: 11; /* Ensures the menu toggle is above the header */
+}
+
+.menu-toggle .bar {
+    height: 3px; /* Sets the height of each bar in the toggle */
+    width: 25px; /* Sets the width of each bar in the toggle */
+    background-color: #fff; /* Sets the color of the bars to white */
+    margin: 3px 0; /* Adds vertical spacing between bars */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.nav-bar {
+    position: fixed; /* Fixes the navigation bar in place */
+    top: 0; /* Positions the nav bar at the top */
+    left: 0; /* Positions the nav bar on the left */
+    height: 100%; /* Sets the height to fill the viewport */
+    width: 100%; /* Sets the width to fill the viewport */
+    background-color: rgba(0, 0, 0, 0.9); /* Sets a semi-transparent black background */
+    transform: translateY(-100%); /* Initially hides the nav bar off-screen */
+    transition: transform 0.3s ease; /* Smooth transition for showing/hiding the nav bar */
+    z-index: 9; /* Ensures the nav bar is above other elements */
+}
+
+.nav-bar.show {
+    transform: translateY(0); /* Moves the nav bar into view when the "show" class is added */
 }
 
 .nav-bar ul {
-    list-style-type: none; /* Remove bullet points from the list */
-    display: flex; /* Use flexbox for the navigation items */
-    gap: 20px; /* Add space between navigation items */
-    flex-wrap: wrap; /* Allow wrapping of navigation items */
+    list-style-type: none; /* Removes default list styling */
+    display: flex; /* Uses flexbox layout for the list */
+    flex-direction: column; /* Stacks list items vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    height: 100%; /* Fills the height of the nav bar */
 }
 
 .nav-bar ul li {
-    flex: 1; /* Allow each item to grow equally */
-    text-align: center; /* Center align text in each nav item */
+    margin: 20px 0; /* Adds vertical spacing between list items */
 }
 
 .nav-bar ul li a {
-    color: #fff; /* Set text color of links to white */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 1.1rem; /* Set font size for links */
+    background-color: #7dc444; /* Sets the background color of links */
+    color: #fff; /* Sets the text color of links to white */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 1.2rem; /* Sets the font size for links */
+    padding: 10px 20px; /* Adds padding around links */
+    border-radius: 30px; /* Rounds the corners of links */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition for various properties */
 }
 
-.contact-section {
-    padding: 120px 20px; /* Add padding to the contact section for spacing */
-    text-align: center; /* Center align text in the section */
+.nav-bar ul li a:hover {
+    background-color: #fff; /* Changes background color on hover */
+    color: #7dc444; /* Changes text color on hover */
+    transform: scale(1.05); /* Slightly enlarges the link on hover */
 }
 
-.contact-section h2 {
-    font-size: 2.5rem; /* Set font size for the section heading */
-    margin-bottom: 40px; /* Add margin below the heading for spacing */
-    color: #fff; /* Set heading text color to white */
+/* Contact section styles without the black background container */
+.hero-contactos {
+    background-image: url('header_img.jpg'); /* Sets a background image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    height: 100vh; /* Sets the height to fill the viewport */
+    display: flex; /* Uses flexbox layout for the section */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Centers text within the section */
+    color: #fff; /* Sets the text color to white */
 }
 
-.contact-info {
-    margin: 30px 0; /* Add margin above and below each contact info block */
+.contactos-container {
+    display: flex; /* Uses flexbox layout for the container */
+    flex-direction: column; /* Stacks children vertically */
+    gap: 20px; /* Adds space between child elements */
+    padding: 40px; /* Adds padding around the container */
 }
 
-.contact-info h3 {
-    font-size: 1.5rem; /* Set font size for contact info subheadings */
-    color: #fff; /* Set subheading text color to white */
+.contacto-bloco {
+    background-color: rgba(255, 255, 255, 0.1); /* Sets a semi-transparent white background */
+    padding: 20px; /* Adds padding around the block */
+    border-radius: 10px; /* Rounds the corners of the block */
 }
 
-.contact-info p {
-    font-size: 1.2rem; /* Set font size for paragraphs in contact info */
-    color: #fff; /* Set paragraph text color to white */
+.contacto-bloco h2 {
+    font-size: 2rem; /* Sets the font size for headings */
+    margin-bottom: 10px; /* Adds space below the heading */
 }
 
+.contacto-bloco p {
+    font-size: 1.2rem; /* Sets the font size for paragraphs */
+    margin: 5px 0; /* Adds vertical space around paragraphs */
+}
+
+.contacto-bloco a {
+    color: #7dc444; /* Sets the link color */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.contacto-bloco a:hover {
+    text-decoration: underline; /* Underlines the link on hover */
+}
+
+/* Footer styles */
 footer {
-    color: #fff; /* Set footer text color to white */
-    text-align: center; /* Center align text in the footer */
-    padding: 10px 0; /* Add vertical padding in the footer */
-    position: relative; /* Set position relative for footer */
-    bottom: 0; /* Position at the bottom of the containing block */
-    width: 100%; /* Set footer width to 100% */
-    background-color: transparent; /* Semi-transparent background color for the footer */
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .nav-bar ul {
-        flex-direction: column; /* Stack navigation items vertically on small screens */
-        align-items: center; /* Center align items in the column */
-    }
-
-    .nav-bar ul li {
-        width: 100%; /* Set navigation items to full width on small screens */
-    }
-
-    .contact-section h2 {
-        font-size: 2rem; /* Reduce heading size on small screens */
-    }
-
-    .contact-info h3 {
-        font-size: 1.2rem; /* Reduce subheading size on small screens */
-    }
-
-    .contact-info p {
-        font-size: 1rem; /* Reduce paragraph text size on small screens */
-    }
+    background-color: #5a9f33; /* Sets the footer background color */
+    color: #000000; /* Sets the text color to black */
+    text-align: center; /* Centers the text within the footer */
+    padding: 20px; /* Adds padding around the footer */
+    width: 100%; /* Sets the footer width to 100% of the viewport */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Adds a shadow effect to the footer */
 }

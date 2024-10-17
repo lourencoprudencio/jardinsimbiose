@@ -1,193 +1,223 @@
+/* Resetting default margins and paddings for all elements */
 * {
-    margin: 0; /* Reset margin for all elements */
-    padding: 0; /* Reset padding for all elements */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 0; /* Resets margin for all elements to 0 */
+    padding: 0; /* Resets padding for all elements to 0 */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
 
+/* Setting styles for the body and html elements */
 body, html {
-    height: 100%; /* Set height to 100% for body and html */
-    font-family: 'Arial', sans-serif; /* Set the font family */
-    color: #fff; /* Set default text color to white */
+    height: 100%; /* Sets the height of the body and html to full viewport height */
+    font-family: 'Arial', sans-serif; /* Sets the font family for text */
+    color: #fff; /* Sets the default text color to white */
 }
 
+/* Main header styles */
 header.main-header {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Center items vertically */
-    background-color: transparent; /* Transparent background by default */
-    padding: 15px 20px; /* Padding for the header */
-    position: fixed; /* Fix the header at the top */
-    width: 100%; /* Full width */
-    top: 0; /* Align to the top */
-    z-index: 10; /* Ensure it stays above other elements */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    display: flex; /* Uses flexbox layout for header */
+    justify-content: space-between; /* Distributes space between header items */
+    align-items: center; /* Aligns items vertically in the center */
+    background-color: transparent; /* Sets the background to transparent initially */
+    padding: 15px 20px; /* Adds padding around the header */
+    position: fixed; /* Fixes the header at the top of the viewport */
+    width: 100%; /* Sets header width to full */
+    top: 0; /* Positions the header at the top of the page */
+    z-index: 10; /* Sets stacking order, ensuring the header is on top of other elements */
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
 }
 
+/* Styles for the header when scrolled */
 header.main-header.scrolled {
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background when scrolled */
+    background-color: rgba(0, 0, 0, 0.8); /* Changes the background to a semi-transparent black when scrolled */
 }
 
+/* Logo styles */
 .logo {
-    width: 120px; /* Set width for the logo */
+    width: 120px; /* Sets a fixed width for the logo */
+    transition: transform 0.3s ease; /* Smooth transition for scaling the logo */
 }
 
+/* Logo hover effect */
+.logo:hover {
+    transform: scale(1.05); /* Slightly increases the size of the logo on hover */
+}
+
+/* Menu toggle button styles */
+.menu-toggle {
+    display: flex; /* Changes display to flex for visibility */
+    flex-direction: column; /* Stacks the bars in a column */
+    cursor: pointer; /* Changes the cursor to indicate the element is clickable */
+    z-index: 11; /* Increases z-index to ensure it appears above other elements */
+}
+
+/* Styles for the bars in the menu toggle */
+.menu-toggle .bar {
+    height: 3px; /* Sets the height of the menu bars */
+    width: 25px; /* Sets the width of the menu bars */
+    background-color: #fff; /* Sets the color of the bars to white */
+    margin: 3px 0; /* Adds vertical spacing between the bars */
+    transition: all 0.3s ease; /* Smooth transition for all properties during state changes */
+}
+
+/* Full-screen menu styles */
+.nav-bar {
+    position: fixed; /* Fixes the navigation to the top of the viewport */
+    top: 0; /* Aligns the navigation bar to the top */
+    left: 0; /* Aligns the navigation bar to the left */
+    height: 100%; /* Sets the height of the navigation bar to full viewport height */
+    width: 100%; /* Sets the width of the navigation bar to full */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background for the navigation bar */
+    transform: translateY(-100%); /* Initially hides the navigation bar above the viewport */
+    transition: transform 0.3s ease; /* Smooth transition for showing/hiding the navigation bar */
+    z-index: 9; /* Ensures the navigation bar is above other elements */
+}
+
+/* Shows the navigation bar when the 'show' class is added */
+.nav-bar.show {
+    transform: translateY(0); /* Shows the navigation bar */
+}
+
+/* Styles for the unordered list in the navigation bar */
 .nav-bar ul {
-    list-style-type: none; /* Remove bullet points from the list */
-    display: flex; /* Use flexbox for navigation items */
-    gap: 20px; /* Space between navigation items */
+    list-style-type: none; /* Removes bullet points from the list */
+    display: flex; /* Uses flexbox for navigation items */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically within the full height */
+    height: 100%; /* Sets the height to full for vertical centering */
 }
 
+/* Navigation item styles */
 .nav-bar ul li {
-    margin: 0; /* Remove margin from list items */
+    margin: 20px 0; /* Adds vertical margin between items */
 }
 
+/* Navigation link styles */
 .nav-bar ul li a {
-    color: #fff; /* Set text color for links */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 1.1rem; /* Set font size for links */
-    padding: 10px 15px; /* Padding for links */
-    border-radius: 30px; /* Rounded corners for links */
-    transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+    display: inline-block; /* Treats the links as inline-block elements */
+    background-color: #7dc444; /* Background color of the links */
+    color: #fff; /* Text color of the links */
+    text-decoration: none; /* Removes underline from the links */
+    font-size: 1.2rem; /* Font size for the links */
+    padding: 10px 20px; /* Adds padding to the links */
+    border-radius: 30px; /* Rounds the corners of the links */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition for background, text color, and scaling */
 }
 
+/* Styles for links on hover */
 .nav-bar ul li a:hover {
-    background-color: #fff; /* Change background color on hover */
-    color: #7dc444; /* Change text color on hover */
+    background-color: #fff; /* Changes background color to white on hover */
+    color: #7dc444; /* Changes text color to the original background color */
+    transform: scale(1.05); /* Slightly increases the size of the link */
 }
 
+/* Hero section styles */
 .hero {
-    background-image: url('header_img.jpg'); /* Background image for hero section */
-    background-size: cover; /* Cover the entire area */
-    background-position: center; /* Center the background image */
-    height: 100vh; /* Full viewport height */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    text-align: center; /* Center text */
-    color: #fff; /* Set text color to white */
+    background-image: url('header_img.jpg'); /* Sets a background image for the hero section */
+    background-size: cover; /* Ensures the background image covers the entire section */
+    background-position: center; /* Centers the background image */
+    height: 100vh; /* Sets the height of the hero section to full viewport height */
+    display: flex; /* Uses flexbox layout for the hero section */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Centers text within the hero section */
+    color: #fff; /* Sets text color to white */
 }
 
+/* Container for the content within the hero section */
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for content */
-    padding: 20px; /* Padding for the content area */
-    border-radius: 10px; /* Rounded corners for content area */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for hero content */
+    padding: 20px; /* Adds padding around the hero content */
+    border-radius: 10px; /* Rounds the corners of the hero content area */
 }
 
+/* Main heading styles in the hero section */
 .hero-content h1 {
-    font-size: 3rem; /* Font size for the main heading */
-    margin-bottom: 10px; /* Space below the heading */
+    font-size: 3rem; /* Sets font size for the main heading */
+    margin-bottom: 10px; /* Adds space below the main heading */
 }
 
+/* Paragraph text styles in the hero section */
 .hero-content p {
-    font-size: 1.5rem; /* Font size for the paragraph */
+    font-size: 1.5rem; /* Sets font size for paragraph text */
 }
 
+/* Button styles for "Solicitar Orçamento" */
 .btn-orcamento {
-    display: inline-block; /* Treat as inline block for button */
-    background-color: #7dc444; /* Button background color */
-    color: #fff; /* Button text color */
-    font-size: 1.2rem; /* Font size for button text */
-    padding: 10px 20px; /* Padding for button */
-    border-radius: 30px; /* Rounded corners for button */
-    text-decoration: none; /* Remove underline from button */
-    margin-top: 20px; /* Space above the button */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    display: inline-block; /* Treats the button as an inline-block element */
+    background-color: #7dc444; /* Sets the background color of the button */
+    color: #fff; /* Sets the text color of the button to white */
+    font-size: 1.2rem; /* Sets font size for button text */
+    padding: 10px 20px; /* Adds padding to the button */
+    border-radius: 30px; /* Rounds the corners of the button */
+    text-decoration: none; /* Removes underline from the button */
+    margin-top: 20px; /* Adds space above the button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
+    cursor: pointer; /* Changes the cursor to indicate the element is clickable */
 }
 
+/* Styles for button on hover */
 .btn-orcamento:hover {
-    background-color: #5a9f33; /* Change background color on hover */
+    background-color: #5a9f33; /* Changes button background color on hover */
+    color: #fff; /* Ensures text color remains white on hover */
 }
 
+/* Partnerships section styles */
 .parcerias {
-    padding: 50px 20px; /* Padding for partnerships section */
-    background-color: #fff; /* Background color for partnerships section */
-    color: #7dc444; /* Text color for partnerships section */
-    text-align: center; /* Center text */
+    padding: 50px 20px; /* Adds padding to the partnerships section */
+    background-color: #fff; /* Sets the background color of the partnerships section to white */
+    color: #7dc444; /* Sets text color in the partnerships section to a green shade */
+    text-align: center; /* Centers text in the partnerships section */
 }
 
+/* Subheading styles for partnerships */
 .parcerias h2 {
-    font-size: 2.5rem; /* Font size for partnerships heading */
-    margin-bottom: 30px; /* Space below the heading */
+    font-size: 2.5rem; /* Sets font size for the partnerships section title */
+    margin-bottom: 30px; /* Adds space below the title */
 }
 
+/* Container for partnership items */
 .parcerias-container {
-    display: flex; /* Use flexbox for partnerships layout */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center items */
-    gap: 20px; /* Space between partnership items */
+    display: flex; /* Uses flexbox layout for the partnerships container */
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+    justify-content: center; /* Centers items horizontally within the container */
 }
 
+/* Individual partnership item styles */
 .parceria {
-    text-align: center; /* Center text within partnership items */
+    margin: 10px; /* Adds margin around each partnership item */
 }
 
-.parceria a {
-    text-decoration: none; /* Remove underline from partnership links */
-    color: inherit; /* Inherit color from parent */
-}
-
+/* Styles for partnership images */
 .parceria img {
-    width: 150px; /* Set width for partnership images */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Space below images */
+    width: 150px; /* Sets a fixed width for partnership images */
+    border-radius: 10px; /* Rounds the corners of partnership images */
+    transition: transform 0.3s ease; /* Smooth transition for scaling images */
 }
 
-.parceria p {
-    font-size: 1.2rem; /* Font size for partnership descriptions */
+/* Styles for partnership images on hover */
+.parceria img:hover {
+    transform: scale(1.1); /* Slightly increases the size of the image on hover */
 }
 
+/* Footer styles */
 footer {
-    color: #fff; /* Set text color for footer */
-    text-align: center; /* Center text in footer */
-    padding: 10px 0; /* Vertical padding for footer */
-    position: relative; /* Position relative for footer */
-    bottom: 0; /* Align to the bottom */
-    width: 100%; /* Full width */
-    background-color: #7dc444; /* Background color for footer */
+    background-color: #5a9f33; /* Dark background with 80% opacity */
+    color: #000000; /* White text color for the footer */
+    text-align: center; /* Centers the text in the footer */
+    padding: 20px; /* Adds padding around the footer */
+    position: relative; /* Positions footer relative to the page flow */
+    bottom: 0; /* Sticks the footer to the bottom of the page */
+    width: 100%; /* Sets footer width to full */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Adds shadow above the footer */
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .nav-bar ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center; /* Center items */
-    }
-
-    .nav-bar ul li {
-        margin: 10px 0; /* Space between menu links */
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem; /* Smaller font size for small screens */
-    }
-
-    .hero-content p {
-        font-size: 1.2rem; /* Smaller font size for small screens */
-    }
-
-    .parcerias h2 {
-        font-size: 2rem; /* Smaller font size for partnerships heading */
-    }
-
-    .parcerias-container {
-        flex-direction: column; /* Stack partnerships items vertically */
-    }
-
-    .parceria img {
-        width: 120px; /* Smaller width for images on small screens */
-    }
-
-    .parceria p {
-        font-size: 1rem; /* Smaller font size for partnership descriptions */
-    }
+/* Styles for footer links, if needed */
+footer a {
+    color: #7dc444; /* Green color for footer links */
+    text-decoration: none; /* Removes underline from footer links */
 }
 
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem; /* Even smaller font size for very small screens */
-    }
-
-    .hero-content p {
-        font-size: 1rem; /* Even smaller font size for very small screens */
-    }
+footer a:hover {
+    text-decoration: underline; /* Underlines links on hover for better visibility */
 }

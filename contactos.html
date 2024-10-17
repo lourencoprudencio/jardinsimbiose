@@ -1,54 +1,64 @@
-<!DOCTYPE html>
-<html lang="pt"> <!-- Set the language of the document to Portuguese -->
+<!DOCTYPE html> <!-- Declares the document type and version of HTML being used -->
+<html lang="pt"> <!-- Starts the HTML document and sets the language to Portuguese -->
 <head>
-    <meta charset="UTF-8"> <!-- Specify the character encoding for the document -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make the page responsive -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensure compatibility with Internet Explorer -->
-    <title>Contactos - JardimSimbiose</title> <!-- Title of the webpage displayed in the browser tab -->
-    <link rel="icon" href="logo_jardinsimbiose.png" type="image/png"> <!-- Set the favicon for the page -->
-    <link rel="stylesheet" href="inicio.css"> <!-- Link to the main stylesheet for consistent styling -->
-    <link rel="stylesheet" href="contactos.css"> <!-- Link to an additional stylesheet specifically for the contacts page -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for proper text representation -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configures the viewport for responsive design -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures compatibility with Internet Explorer -->
+    <title>Contactos - JardimSimbiose</title> <!-- Sets the title of the webpage, shown in the browser tab -->
+    <link rel="icon" href="logo_jardinsimbiose.png" type="image/png"> <!-- Links to the favicon for the website -->
+    <link rel="stylesheet" href="contactos.css"> <!-- Links to the external CSS file for styling the page -->
 </head>
 <body>
-    <header class="main-header" id="mainHeader"> <!-- Header section containing the logo and navigation -->
-        <img src="logo_jardinsimbiose.png" alt="Logotipo JardimSimbiose" class="logo"> <!-- Logo image with alt text for accessibility -->
-        <nav class="nav-bar"> <!-- Navigation bar for site links -->
-            <ul> <!-- Unordered list for navigation items -->
-                <li><a href="inicio.html">Início</a></li> <!-- Link to the homepage -->
-                <li><a href="#servicos">Serviços</a></li> <!-- Link to services section -->
-                <li><a href="#contactos">Contactos</a></li> <!-- Link to the current contacts section -->
-                <li><a href="#portefolio">Portefólio</a></li> <!-- Link to portfolio section -->
-                <li><a href="#dicas">Dicas de Jardinagem</a></li> <!-- Link to gardening tips section -->
-                <li><a href="#orcamento" class="orcamento-button">Orçamento</a></li> <!-- Link to budget section with additional class for styling -->
+    <header class="main-header" id="mainHeader"> <!-- Starts the header section of the webpage with a class and ID for styling and scripting -->
+        <a href="https://www.instagram.com/nome_da_marca/" target="_blank"> <!-- Links to the Instagram page and opens in a new tab -->
+            <img src="logo_jardinsimbiose.png" alt="Logotipo JardimSimbiose" class="logo"> <!-- Displays the logo image with alt text for accessibility -->
+        </a>
+        <div class="menu-toggle" id="menuToggle"> <!-- Menu toggle for mobile view, with an ID for JavaScript functionality -->
+            <div class="bar"></div> <!-- First bar of the menu toggle icon -->
+            <div class="bar"></div> <!-- Second bar of the menu toggle icon -->
+            <div class="bar"></div> <!-- Third bar of the menu toggle icon -->
+        </div>
+        <nav class="nav-bar" id="navBar"> <!-- Starts the navigation bar with a class and ID -->
+            <ul> <!-- Unordered list for the navigation links -->
+                <li><a href="inicio.html">Início</a></li> <!-- Navigation link to the home page -->
+                <li><a href="#servicos">Serviços</a></li> <!-- Navigation link to the services section on the same page -->
+                <li><a href="contactos.html">Contactos</a></li> <!-- Navigation link to the contacts page -->
+                <li><a href="#portefolio">Portefólio</a></li> <!-- Navigation link to the portfolio section on the same page -->
+                <li><a href="#dicas">Dicas de Jardinagem</a></li> <!-- Navigation link to gardening tips section on the same page -->
+                <li><a href="orcamento.html" class="orcamento-button">Orçamento</a></li> <!-- Navigation link to the budget page, styled with a specific class -->
             </ul>
         </nav>
     </header>
 
-    <section class="contact-section" id="contactos"> <!-- Section for contact information -->
-        <h2>Contactos</h2> <!-- Main heading for the contact section -->
-        <div class="contact-info"> <!-- Contact information block -->
-            <h3>Apoio ao cliente:</h3> <!-- Subheading for customer support -->
-            <p>Artur Prudêncio</p> <!-- Name of the customer support contact -->
-            <p>(+351) 960 366 905</p> <!-- Phone number for customer support -->
-        </div>
-        <div class="contact-info"> <!-- Another contact information block -->
-            <h3>Departamento Comercial:</h3> <!-- Subheading for the commercial department -->
-            <p>Ana Sofia Prudêncio</p> <!-- Name of the commercial department contact -->
-            <p>(+351) 929 175 444</p> <!-- Phone number for the commercial department -->
-        </div>
-        <div class="contact-info"> <!-- Another contact information block -->
-            <h3>Departamento Informático:</h3> <!-- Subheading for the IT department -->
-            <p>Lourenço Prudêncio</p> <!-- Name of the IT department contact -->
-            <p>(+351) 934 883 144</p> <!-- Phone number for the IT department -->
-        </div>
-        <div class="contact-info"> <!-- Final contact information block -->
-            <h3>E-mail de suporte:</h3> <!-- Subheading for support email -->
-            <p>jardinsimbiose@gmail.com</p> <!-- Support email address -->
+    <section class="hero-contactos"> <!-- Starts a section for the contact information with a specific class -->
+        <div class="contactos-container"> <!-- Container for organizing the contact blocks -->
+            <div class="contacto-bloco"> <!-- First contact block for general inquiries -->
+                <h2>Geral</h2> <!-- Heading for the general contact block -->
+                <p><a href="mailto:jardinsimbiose@gmail.com">jardinsimbiose@gmail.com</a></p> <!-- Email link for general inquiries -->
+            </div>
+            <div class="contacto-bloco"> <!-- Second contact block for IT department -->
+                <h2>Departamento Informático</h2> <!-- Heading for the IT department contact block -->
+                <p>Lourenço Prudêncio</p> <!-- Name of the contact person for the IT department -->
+                <p><a href="tel:+351934883144">+351 934 883 144</a></p> <!-- Phone link for contacting the IT department -->
+            </div>
+            <div class="contacto-bloco"> <!-- Third contact block for the commercial department -->
+                <h2>Departamento Comercial</h2> <!-- Heading for the commercial department contact block -->
+                <p>Ana Sofia Prudêncio</p> <!-- Name of the contact person for the commercial department -->
+                <p><a href="tel:+351929175444">+351 929 175 444</a></p> <!-- Phone link for contacting the commercial department -->
+            </div>
+            <div class="contacto-bloco"> <!-- Fourth contact block for customer support -->
+                <h2>Apoio ao Cliente</h2> <!-- Heading for the customer support contact block -->
+                <p>Artur Prudêncio</p> <!-- Name of the contact person for customer support -->
+                <p><a href="tel:+351960366905">+351 960 366 905</a></p> <!-- Phone link for contacting customer support -->
+            </div>
         </div>
     </section>
 
-    <footer> <!-- Footer section of the page -->
-        <p>&copy; 2024 JardimSimbiose. Todos os direitos reservados.</p> <!-- Copyright notice -->
+    <footer> <!-- Starts the footer section of the webpage -->
+        <p>&copy; 2024 JardimSimbiose. Todos os direitos reservados.</p> <!-- Copyright notice for the website -->
     </footer>
+
+    <!-- Moving the script to the end of the body for better performance -->
+    <script src="contactos.js"></script> <!-- Links to the external JavaScript file for additional functionality -->
 </body>
 </html>

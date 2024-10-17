@@ -1,68 +1,73 @@
-<!DOCTYPE html>
-<html lang="pt"> <!-- Declare the document type and set the language to Portuguese -->
+<!DOCTYPE html> <!-- Declares the document type and version of HTML -->
+<html lang="pt"> <!-- Starts the HTML document, setting the language to Portuguese -->
 <head>
-    <meta charset="UTF-8"> <!-- Set character encoding to UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Set viewport for responsive design -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensure compatibility with Internet Explorer -->
-    <title>JardimSimbiose</title> <!-- Set the title of the webpage -->
-    <link rel="icon" href="logo_jardinsimbiose.png" type="image/png"> <!-- Link to the favicon -->
-    <link rel="stylesheet" href="inicio.css"> <!-- Link to the external CSS file -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering on mobile devices by setting the viewport width -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures compatibility with Internet Explorer -->
+    <title>JardimSimbiose</title> <!-- Sets the title of the webpage -->
+    <link rel="icon" href="logo_jardinsimbiose.png" type="image/png"> <!-- Links the favicon for the website -->
+    <link rel="stylesheet" href="inicio.css"> <!-- Links the external CSS stylesheet for styling the webpage -->
 </head>
 <body>
-    <header class="main-header" id="mainHeader"> <!-- Main header section -->
-        <img src="logo_jardinsimbiose.png" alt="Logotipo JardimSimbiose" class="logo"> <!-- Logo image -->
-        <nav class="nav-bar"> <!-- Navigation bar -->
-            <ul> <!-- Unordered list for navigation items -->
-                <li><a href="inicio.html">Início</a></li> <!-- Link to home -->
-                <li><a href="#servicos">Serviços</a></li> <!-- Link to services section -->
-                <li><a href="contactos.html">Contactos</a></li> <!-- Link to contacts section -->
-                <li><a href="#portefolio">Portefólio</a></li> <!-- Link to portfolio section -->
-                <li><a href="#dicas">Dicas de Jardinagem</a></li> <!-- Link to gardening tips section -->
-                <li><a href="#orcamento" class="orcamento-button">Orçamento</a></li> <!-- Link to budget section with a specific class -->
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero" id="inicio"> <!-- Hero section -->
-        <div class="hero-content"> <!-- Content within the hero section -->
-            <h1>Bem-vindo à JardimSimbiose</h1> <!-- Main heading -->
-            <p>Soluções sustentáveis e inovadoras para o seu jardim</p> <!-- Subheading or description -->
-            <a href="#orcamento" class="btn-orcamento">Solicitar Orçamento</a> <!-- Styled button for requesting a quote -->
+    <header class="main-header" id="mainHeader"> <!-- Starts the header section with a class and ID -->
+        <a href="https://www.instagram.com/nome_da_marca/" target="_blank"> <!-- Link to the brand's Instagram, opens in a new tab -->
+            <img src="logo_jardinsimbiose.png" alt="Logotipo JardimSimbiose" class="logo"> <!-- Displays the logo image with alternative text -->
+        </a>
+        <div class="menu-toggle" id="menuToggle"> <!-- Button for toggling the mobile menu with an ID -->
+            <div class="bar"></div> <!-- First bar of the menu toggle icon -->
+            <div class="bar"></div> <!-- Second bar of the menu toggle icon -->
+            <div class="bar"></div> <!-- Third bar of the menu toggle icon -->
         </div>
-    </section>
+        <nav class="nav-bar"> <!-- Starts the navigation bar -->
+            <ul> <!-- Starts an unordered list for the navigation items -->
+                <li><a href="inicio.html">Início</a></li> <!-- Navigation link to the homepage -->
+                <li><a href="#servicos">Serviços</a></li> <!-- Navigation link to the services section -->
+                <li><a href="contactos.html">Contactos</a></li> <!-- Navigation link to the contacts page -->
+                <li><a href="#portefolio">Portefólio</a></li> <!-- Navigation link to the portfolio section -->
+                <li><a href="#dicas">Dicas de Jardinagem</a></li> <!-- Navigation link to the gardening tips section -->
+                <li><a href="orcamento.html" class="orcamento-button">Orçamento</a></li> <!-- Navigation link to the budget section with a specific class for styling -->
+            </ul> <!-- Ends the unordered list -->
+        </nav> <!-- Ends the navigation bar -->
+    </header> <!-- Ends the header section -->
 
-    <section class="parcerias" id="parcerias"> <!-- Partnerships section -->
-        <h2>Parcerias</h2> <!-- Heading for partnerships -->
-        <div class="parcerias-container"> <!-- Container for partnership items -->
-            <div class="parceria"> <!-- Individual partnership item -->
-                <a href="https://example-ghe.com" target="_blank"> <!-- Link to GHE -->
-                    <img src="ghe_logo.jpg" alt="GHE"> <!-- GHE logo image -->
-                    <p>GHE</p> <!-- Partnership name -->
-                </a>
-            </div>
-            <div class="parceria"> <!-- Individual partnership item -->
-                <a href="https://example-ecofree.com" target="_blank"> <!-- Link to EcoFree -->
-                    <img src="ecofree.jpg" alt="EcoFree"> <!-- EcoFree logo image -->
-                    <p>EcoFree</p> <!-- Partnership name -->
-                </a>
-            </div>
-            <div class="parceria"> <!-- Individual partnership item -->
-                <a href="https://example-pessoaldalimpeza.com" target="_blank"> <!-- Link to Pessoal da Limpeza -->
-                    <img src="pessoaldalimpeza_logo.jpg" alt="Pessoal da Limpeza"> <!-- Pessoal da Limpeza logo image -->
-                    <p>Pessoal da Limpeza</p> <!-- Partnership name -->
-                </a>
-            </div>
-            <div class="parceria"> <!-- Individual partnership item -->
-                <a href="https://example-piscinasdalinha.com" target="_blank"> <!-- Link to Piscinas da Linha -->
-                    <img src="piscinas_logo.jpg" alt="Piscinas da Linha"> <!-- Piscinas da Linha logo image -->
-                    <p>Piscinas da Linha</p> <!-- Partnership name -->
-                </a>
-            </div>
-        </div>
-    </section>
+    <section class="hero" id="inicio"> <!-- Starts the hero section with a class and ID -->
+        <div class="hero-content"> <!-- Container for the content within the hero section -->
+            <h1>Bem-vindo à JardimSimbiose</h1> <!-- Main heading of the hero section -->
+            <p>Soluções sustentáveis e inovadoras para o seu jardim</p> <!-- Paragraph text providing a brief description -->
+            <a href="orcamento.html" class="btn-orcamento">Solicitar Orçamento</a> <!-- Button link to the budget section with a specific class for styling -->
+        </div> <!-- Ends the hero content container -->
+    </section> <!-- Ends the hero section -->
 
-    <footer> <!-- Footer section -->
-        <p>&copy; 2024 JardimSimbiose. Todos os direitos reservados.</p> <!-- Copyright text -->
-    </footer>
+    <section class="parcerias" id="parcerias"> <!-- Starts the partnerships section with a class and ID -->
+        <h2>Parcerias</h2> <!-- Subheading for the partnerships section -->
+        <div class="parcerias-container"> <!-- Container for the partnership items -->
+            <div class="parceria"> <!-- Starts a partnership item -->
+                <a href="https://example-ghe.com" target="_blank"> <!-- Link to the partnership website, opens in a new tab -->
+                    <img src="ghe_logo.jpg" alt="GHE"> <!-- Displays the logo of the partnership with alternative text -->
+                </a>
+            </div> <!-- Ends the partnership item -->
+            <div class="parceria"> <!-- Starts another partnership item -->
+                <a href="https://example-ecofree.com" target="_blank"> <!-- Link to another partnership website, opens in a new tab -->
+                    <img src="ecofree.jpg" alt="EcoFree"> <!-- Displays the logo of the partnership with alternative text -->
+                </a>
+            </div> <!-- Ends the partnership item -->
+            <div class="parceria"> <!-- Starts another partnership item -->
+                <a href="https://example-pessoaldalimpeza.com" target="_blank"> <!-- Link to another partnership website, opens in a new tab -->
+                    <img src="pessoaldalimpeza_logo.jpg" alt="Pessoal da Limpeza"> <!-- Displays the logo of the partnership with alternative text -->
+                </a>
+            </div> <!-- Ends the partnership item -->
+            <div class="parceria"> <!-- Starts another partnership item -->
+                <a href="https://example-piscinasdalinha.com" target="_blank"> <!-- Link to another partnership website, opens in a new tab -->
+                    <img src="piscinas_logo.jpg" alt="Piscinas da Linha"> <!-- Displays the logo of the partnership with alternative text -->
+                </a>
+            </div> <!-- Ends the partnership item -->
+        </div> <!-- Ends the partnerships container -->
+    </section> <!-- Ends the partnerships section -->
+
+    <footer> <!-- Starts the footer section -->
+        <p>&copy; 2024 JardimSimbiose. Todos os direitos reservados.</p> <!-- Footer text with copyright notice -->
+    </footer> <!-- Ends the footer section -->
+
+    <script src="inicio.js"></script> <!-- Links the external JavaScript file for functionality -->
 </body>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML being used -->
+<html lang="pt"> <!-- Starts the HTML document and sets the language to Portuguese -->
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for proper text representation -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configures the viewport for responsive design -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures compatibility with Internet Explorer -->
+    <title>Orçamento - JardimSimbiose</title> <!-- Sets the title of the webpage, shown in the browser tab -->
+    <link rel="icon" href="logo_jardinsimbiose.png" type="image/png"> <!-- Links to the favicon for the website -->
+    <link rel="stylesheet" href="orcamento.css"> <!-- Links to the external CSS file for styling the page -->
+</head>
+<body>
+    <header class="main-header" id="mainHeader"> <!-- Starts the header section of the webpage with a class and ID for styling and scripting -->
+        <a href="https://www.instagram.com/nome_da_marca/" target="_blank"> <!-- Links to the Instagram page and opens in a new tab -->
+            <img src="logo_jardinsimbiose.png" alt="Logotipo JardimSimbiose" class="logo"> <!-- Displays the logo image with alt text for accessibility -->
+        </a>
+        <div class="menu-toggle" id="menuToggle"> <!-- Menu toggle for mobile view, with an ID for JavaScript functionality -->
+            <div class="bar"></div> <!-- First bar of the menu toggle icon -->
+            <div class="bar"></div> <!-- Second bar of the menu toggle icon -->
+            <div class="bar"></div> <!-- Third bar of the menu toggle icon -->
+        </div>
+        <nav class="nav-bar" id="navBar"> <!-- Starts the navigation bar with a class and ID -->
+            <ul> <!-- Unordered list for the navigation links -->
+                <li><a href="inicio.html">Início</a></li> <!-- Navigation link to the home page -->
+                <li><a href="#servicos">Serviços</a></li> <!-- Navigation link to the services section on the same page -->
+                <li><a href="contactos.html">Contactos</a></li> <!-- Navigation link to the contacts page -->
+                <li><a href="#portefolio">Portefólio</a></li> <!-- Navigation link to the portfolio section on the same page -->
+                <li><a href="#dicas">Dicas de Jardinagem</a></li> <!-- Navigation link to gardening tips section on the same page -->
+                <li><a href="orcamento.html" class="orcamento-button">Orçamento</a></li> <!-- Navigation link to the budget section on the same page, styled with a specific class -->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-orcamento"> <!-- Starts a section for the budget request with a specific class -->
+        <h1>Solicite um Orçamento</h1> <!-- Main heading for the budget request section -->
+        <form id="orcamentoForm"> <!-- Starts the form for budget requests with a corrected ID for form handling -->
+            <label for="nome">Nome</label> <!-- Label for the name input field -->
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required> <!-- Input field for name, with a placeholder and marked as required -->
+    
+            <label for="email">Email</label> <!-- Label for the email input field -->
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required> <!-- Input field for email, with a placeholder and marked as required -->
+    
+            <label for="telefone">Telefone</label> <!-- Label for the phone input field -->
+            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required> <!-- Input field for phone, with a placeholder and marked as required -->
+    
+            <label for="servico">Serviço</label> <!-- Label for the service selection dropdown -->
+            <select id="servico" name="servico" required> <!-- Dropdown for selecting a service, marked as required -->
+                <option value="">Escolha um serviço</option> <!-- Default option prompting the user to select a service -->
+                <option value="jardinagem">Jardinagem</option> <!-- Option for gardening service -->
+                <option value="paisagismo">Paisagismo</option> <!-- Option for landscaping service -->
+                <option value="manutencao">Manutenção</option> <!-- Option for maintenance service -->
+            </select>
+    
+            <label for="mensagem">Mensagem</label> <!-- Label for the message textarea -->
+            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" rows="4" required></textarea> <!-- Textarea for writing a message, with a placeholder and marked as required -->
+    
+            <button type="submit">Enviar Solicitação</button> <!-- Submit button for the form to send the budget request -->
+        </form>
+    </section>
+
+    <footer> <!-- Starts the footer section of the webpage -->
+        <p>&copy; 2024 JardimSimbiose. Todos os direitos reservados.</p> <!-- Copyright notice for the website -->
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script> <!-- Links to the EmailJS SDK for handling email functionality -->
+    <script src="orcamento.js"></script> <!-- Links to the external JavaScript file for additional functionality -->
+</body>
+</html>

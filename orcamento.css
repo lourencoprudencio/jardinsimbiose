@@ -1,0 +1,193 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0; /* Removes the default margin from all elements */
+    padding: 0; /* Removes the default padding from all elements */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Setting styles for the body and html elements */
+body, html {
+    height: 100%; /* Sets the height of the body and html to fill the entire viewport */
+    font-family: 'Arial', sans-serif; /* Sets the font to Arial or a generic sans-serif fallback */
+    color: #fff; /* Sets the text color to white */
+}
+
+/* Main header styles */
+header.main-header {
+    display: flex; /* Uses flexbox layout for the header */
+    justify-content: space-between; /* Distributes space between child elements */
+    align-items: center; /* Aligns child elements vertically in the center */
+    background-color: transparent; /* Sets the initial background color to transparent */
+    padding: 15px 20px; /* Adds padding around the header */
+    position: fixed; /* Fixes the header at the top of the viewport */
+    width: 100%; /* Sets the header width to fill the entire viewport */
+    top: 0; /* Positions the header at the top */
+    z-index: 10; /* Ensures the header is above other elements */
+    transition: background-color 0.3s ease; /* Smooth transition for background color changes */
+}
+
+header.main-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Changes the background color when the header is scrolled */
+}
+
+.logo {
+    width: 120px; /* Sets the width of the logo */
+    transition: transform 0.3s ease; /* Smooth transition for transformations applied to the logo */
+}
+
+.menu-toggle {
+    display: flex; /* Uses flexbox layout for the menu toggle button */
+    flex-direction: column; /* Stacks the bars of the toggle vertically */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the toggle */
+    z-index: 11; /* Ensures the menu toggle is above the header */
+}
+
+.menu-toggle .bar {
+    height: 3px; /* Sets the height of each bar in the menu toggle */
+    width: 25px; /* Sets the width of each bar in the menu toggle */
+    background-color: #fff; /* Sets the color of the bars to white */
+    margin: 3px 0; /* Adds vertical spacing between the bars */
+    transition: all 0.3s ease; /* Smooth transition for all properties of the bars */
+}
+
+.nav-bar {
+    position: fixed; /* Fixes the navigation bar in place */
+    top: 0; /* Positions the navigation bar at the top of the viewport */
+    left: 0; /* Positions the navigation bar on the left of the viewport */
+    height: 100%; /* Sets the height of the navigation bar to fill the viewport */
+    width: 100%; /* Sets the width of the navigation bar to fill the viewport */
+    background-color: rgba(0, 0, 0, 0.9); /* Sets a semi-transparent black background */
+    transform: translateY(-100%); /* Initially hides the navigation bar off-screen */
+    transition: transform 0.3s ease; /* Smooth transition for showing and hiding the navigation bar */
+    z-index: 9; /* Ensures the navigation bar is above other elements */
+}
+
+.nav-bar.show {
+    transform: translateY(0); /* Moves the navigation bar into view when the "show" class is added */
+}
+
+.nav-bar ul {
+    list-style-type: none; /* Removes the default list styling */
+    display: flex; /* Uses flexbox layout for the list */
+    flex-direction: column; /* Stacks list items vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically within the nav bar */
+    height: 100%; /* Fills the height of the navigation bar */
+}
+
+.nav-bar ul li {
+    margin: 20px 0; /* Adds vertical spacing between list items */
+}
+
+.nav-bar ul li a {
+    background-color: #7dc444; /* Sets the background color of the links */
+    color: #fff; /* Sets the text color of the links to white */
+    text-decoration: none; /* Removes the underline from the links */
+    font-size: 1.2rem; /* Sets the font size for the links */
+    padding: 10px 20px; /* Adds padding around the links */
+    border-radius: 30px; /* Rounds the corners of the links */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions for various properties */
+}
+
+/* Animation on hover */
+.nav-bar ul li a:hover {
+    background-color: #fff; /* Changes the background color of the link to white on hover */
+    color: #7dc444; /* Changes the text color of the link to green on hover */
+    transform: scale(1.1); /* Slightly enlarges the button on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow effect to the button on hover */
+}
+
+/* Hero section for the orcamento page */
+.hero-orcamento {
+    background-image: url('header_img.jpg'); /* Sets a background image for the hero section */
+    background-size: cover; /* Ensures the background image covers the entire section */
+    background-position: center; /* Centers the background image */
+    height: 100vh; /* Sets the height to fill the viewport */
+    display: flex; /* Uses flexbox layout for the section */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text within the section */
+    color: #fff; /* Sets the text color to white */
+    padding: 20px; /* Adds padding around the section */
+}
+
+h1 {
+    font-size: 2.5rem; /* Sets the font size for the main heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+}
+
+/* Styled form */
+form {
+    display: flex; /* Uses flexbox layout for the form */
+    flex-direction: column; /* Stacks form elements vertically */
+    gap: 15px; /* Adds space between form elements */
+    width: 100%; /* Sets the form width to 100% of the parent container */
+    max-width: 600px; /* Sets a maximum width for the form */
+    margin: 0 auto; /* Centers the form horizontally within the parent container */
+    background: rgba(255, 255, 255, 0.2); /* Sets a semi-transparent white background */
+    padding: 20px; /* Adds padding around the form */
+    border-radius: 10px; /* Rounds the corners of the form */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Adds a shadow effect to the form */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    opacity: 0; /* Initially hides the form */
+    transform: translateY(20px); /* Slightly shifts the form down initially */
+    animation: fadeIn 0.5s forwards; /* Applies fadeIn animation */
+}
+
+/* Fade In animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Sets opacity to 1 at the end of the animation */
+        transform: translateY(0); /* Moves the form back to its original position */
+    }
+}
+
+label {
+    font-size: 1.2rem; /* Sets the font size for labels */
+    color: #fff; /* Sets the text color for labels to white */
+}
+
+input, select, textarea {
+    padding: 10px; /* Adds padding inside input fields */
+    font-size: 1rem; /* Sets the font size for input fields */
+    border-radius: 5px; /* Rounds the corners of input fields */
+    border: 1px solid #ccc; /* Sets a light gray border for input fields */
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for border and box-shadow on focus */
+}
+
+/* Focus effects */
+input:focus, select:focus, textarea:focus {
+    border: 1px solid #7dc444; /* Changes the border color to green on focus */
+    box-shadow: 0 0 5px rgba(125, 196, 68, 0.5); /* Adds a glow effect on focus */
+}
+
+button {
+    background-color: #7dc444; /* Sets the background color for buttons */
+    color: #fff; /* Sets the text color for buttons to white */
+    padding: 10px; /* Adds padding inside buttons */
+    border: none; /* Removes the default border from buttons */
+    border-radius: 5px; /* Rounds the corners of buttons */
+    font-size: 1.2rem; /* Sets the font size for buttons */
+    cursor: pointer; /* Changes the cursor to pointer when hovering over buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for background color and transformation */
+}
+
+button:hover {
+    background-color: #5a9f33; /* Changes the background color to a darker green on hover */
+    transform: translateY(-2px); /* Slightly lifts the button on hover */
+}
+
+button:active {
+    transform: translateY(0); /* Resets the button's position when clicked */
+}
+
+/* Footer styles */
+footer {
+    background-color: #5a9f33; /* Sets the background color of the footer */
+    color: #000000; /* Sets the text color of the footer to black */
+    text-align: center; /* Centers the text in the footer */
+    padding: 20px; /* Adds padding around the footer */
+    width: 100%; /* Sets the width of the footer to fill the entire viewport */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Adds a shadow effect to the footer */
+}
