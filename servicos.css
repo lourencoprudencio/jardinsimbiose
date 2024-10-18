@@ -1,0 +1,190 @@
+* {
+    margin: 0; /* Remove default margin from all elements */
+    padding: 0; /* Remove default padding from all elements */
+    box-sizing: border-box; /* Set box-sizing to include padding and border in the element's total width and height */
+}
+
+body, html {
+    height: 100%; /* Set the height of body and html to 100% of the viewport */
+    font-family: 'Arial', sans-serif; /* Set the font family to Arial with sans-serif fallback */
+    color: #fff; /* Set the text color to white */
+}
+
+header.main-header {
+    display: flex; /* Use flexbox layout for the header */
+    justify-content: space-between; /* Space out child elements evenly */
+    align-items: center; /* Center items vertically within the header */
+    background-color: transparent; /* Start with a transparent background for the header */
+    padding: 15px 20px; /* Add padding around the header for spacing */
+    position: fixed; /* Fix the header at the top of the viewport so it stays visible */
+    width: 100%; /* Make the header take the full width of the viewport */
+    top: 0; /* Position the header at the very top of the viewport */
+    z-index: 10; /* Set z-index to ensure the header stays above other elements */
+    transition: background-color 0.3s ease; /* Smooth transition for background color changes when scrolling */
+}
+
+header.main-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Set a semi-transparent black background when the header is scrolled */
+}
+
+.logo {
+    width: 120px; /* Set the width of the logo image */
+}
+
+.menu-toggle {
+    display: flex; /* Use flexbox layout for the menu toggle button */
+    flex-direction: column; /* Arrange the bars in a vertical column */
+    cursor: pointer; /* Change cursor to pointer on hover to indicate it's clickable */
+    z-index: 11; /* Ensure the menu toggle stays above the navigation bar */
+}
+
+.menu-toggle .bar {
+    height: 3px; /* Set the height of each menu bar */
+    width: 25px; /* Set the width of each menu bar */
+    background-color: #fff; /* Set the color of the bars to white for visibility */
+    margin: 3px 0; /* Add vertical margin between the bars for spacing */
+    transition: all 0.3s ease; /* Smooth transition for all properties when hovered or interacted with */
+}
+
+.nav-bar {
+    position: fixed; /* Fix the navigation bar to the viewport */
+    top: 0; /* Position the nav bar at the top of the viewport */
+    left: 0; /* Position the nav bar at the left edge of the viewport */
+    height: 100%; /* Set height to fill the entire viewport */
+    width: 100%; /* Set width to fill the entire viewport */
+    background-color: rgba(0, 0, 0, 0.9); /* Set a dark semi-transparent background for the navigation bar */
+    transform: translateY(-100%); /* Initially hide the nav bar off-screen above the viewport */
+    transition: transform 0.3s ease; /* Smooth transition for showing/hiding the nav bar */
+    z-index: 9; /* Set z-index to keep it below the menu toggle */
+}
+
+.nav-bar.show {
+    transform: translateY(0); /* Show the nav bar by resetting its position to visible */
+}
+
+.nav-bar ul {
+    list-style-type: none; /* Remove default list styling (bullets) from the list */
+    display: flex; /* Use flexbox layout for the list items */
+    flex-direction: column; /* Arrange list items in a vertical column */
+    align-items: center; /* Center items horizontally within the list */
+    justify-content: center; /* Center items vertically within the list */
+    height: 100%; /* Fill the height of the navigation bar */
+}
+
+.nav-bar ul li {
+    margin: 20px 0; /* Add vertical margin between list items for spacing */
+}
+
+.nav-bar ul li a {
+    background-color: #7dc444; /* Set background color for links */
+    color: #fff; /* Set text color to white for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.2rem; /* Set font size for the links */
+    padding: 10px 20px; /* Add padding around links for better click area */
+    border-radius: 30px; /* Round the corners of the links for a softer look */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions for background color, text color, and scaling */
+}
+
+.nav-bar ul li a:hover {
+    background-color: #fff; /* Change background to white on hover for emphasis */
+    color: #7dc444; /* Change text color to the primary color on hover */
+    transform: scale(1.05); /* Slightly scale the link up on hover for a visual effect */
+}
+
+.hero-servicos {
+    background-image: url('header_img.jpg'); /* Set a background image for the hero section */
+    background-size: cover; /* Cover the entire area with the image */
+    background-position: center; /* Center the background image within the section */
+    height: 100vh; /* Set height to full viewport height */
+    display: flex; /* Use flexbox layout for the hero section */
+    justify-content: center; /* Center content horizontally within the hero section */
+    align-items: center; /* Center content vertically within the hero section */
+    text-align: center; /* Center text alignment for readability */
+    color: #fff; /* Set text color to white for visibility */
+    position: relative; /* Allows child elements to be positioned absolutely */
+}
+
+.hero-text {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)); /* Create a gradient background for the hero text */
+    padding: 30px; /* Increase padding for more space around the text */
+    border-radius: 15px; /* Round the corners of the hero text box for a softer look */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Add a shadow effect for depth */
+    transform: translateY(0); /* Set initial position for potential animation */
+    opacity: 0; /* Set initial opacity for fade-in effect */
+    animation: fadeIn 1s forwards; /* Apply fade-in animation over 1 second */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(-20px); /* Slide in from above */
+    }
+    to {
+        opacity: 1; /* End fully opaque */
+        transform: translateY(0); /* Set final position at original */
+    }
+}
+
+.hero-text h1 {
+    font-size: 4rem; /* Set a larger font size for the main heading */
+    font-weight: bold; /* Make the main heading bold for emphasis */
+    margin-bottom: 10px; /* Add space below the heading for separation */
+}
+
+.hero-text p {
+    font-size: 1.5rem; /* Set a larger font size for the paragraph text */
+    margin-top: 0; /* Remove default margin at the top of the paragraph */
+}
+
+.servicos-container {
+    display: flex; /* Use flexbox layout for the services container */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line if necessary */
+    justify-content: center; /* Center items horizontally within the container */
+    padding: 40px; /* Add padding around the container for spacing */
+}
+
+.servico {
+    background-color: rgb(255, 255, 255); /* Set background color for individual service boxes to white */
+    padding: 20px; /* Add padding around the service box for spacing */
+    border-radius: 10px; /* Round the corners of the service box for a softer look */
+    width: 300px; /* Set a fixed width for the service box */
+    margin: 20px; /* Add margin around the service box for spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for transform and box-shadow effects */
+    text-align: center; /* Center text inside the service box */
+    color: #000000; /* Set text color to black for visibility */
+}
+
+.servico:hover {
+    transform: translateY(-5px); /* Move the service box up slightly on hover for a lift effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover for depth */
+}
+
+.servico h2 {
+    font-size: 1.5rem; /* Set font size for the service title */
+    margin-bottom: 10px; /* Add margin below the service title for spacing */
+}
+
+.servico p {
+    font-size: 1rem; /* Set font size for the service description */
+    margin: 5px 0; /* Add vertical margin above and below the description for spacing */
+}
+
+.mais-info {
+    color: #7dc444; /* Set color for 'more info' links */
+    text-decoration: none; /* Remove underline from 'more info' links */
+    font-weight: bold; /* Make 'more info' links bold for emphasis */
+}
+
+.mais-info:hover {
+    text-decoration: underline; /* Underline 'more info' links on hover for emphasis */
+}
+
+footer {
+    background-color: #5a9f33; /* Set background color for the footer */
+    color: #000000; /* Set text color for the footer to black */
+    text-align: center; /* Center text in the footer for readability */
+    padding: 20px; /* Add padding around the footer for spacing */
+    width: 100%; /* Make the footer take the full width of the viewport */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Add shadow effect above the footer for depth */
+}

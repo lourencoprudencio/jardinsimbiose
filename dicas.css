@@ -1,0 +1,216 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0; /* Reset all element margins to 0 */
+    padding: 0; /* Reset all element paddings to 0 */
+    box-sizing: border-box; /* Ensures padding and border are included within the element's width/height */
+}
+
+/* Setting styles for the body and html elements */
+body, html {
+    height: 100%; /* Make the body and html elements take the full height of the viewport */
+    font-family: 'Arial', sans-serif; /* Set the default font family to Arial */
+    color: #fff; /* Set the default text color to white */
+}
+
+/* Main header styles */
+header.main-header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space the content evenly with space between */
+    align-items: center; /* Align items vertically in the center */
+    background-color: transparent; /* Initially, the background is transparent */
+    padding: 15px 20px; /* Padding inside the header */
+    position: fixed; /* Fix the header at the top of the page */
+    width: 100%; /* The header takes the full width of the page */
+    top: 0; /* Position the header at the top */
+    z-index: 10; /* Set a high z-index to ensure the header is above other elements */
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+/* Change background color when scrolled */
+header.main-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Add a semi-transparent black background when scrolled */
+}
+
+/* Logo styles */
+.logo {
+    width: 120px; /* Set the logo width */
+    transition: transform 0.3s ease; /* Smooth transformation when scaling or rotating */
+}
+
+/* Menu toggle button styles */
+.menu-toggle {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack the bars vertically */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    z-index: 11; /* Ensure the menu toggle is above other elements */
+}
+
+/* Styling for the bars inside the menu toggle */
+.menu-toggle .bar {
+    height: 3px; /* Set the height of each bar */
+    width: 25px; /* Set the width of each bar */
+    background-color: #fff; /* Set the bar color to white */
+    margin: 3px 0; /* Add margin between each bar */
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+/* Navigation bar styles */
+.nav-bar {
+    position: fixed; /* Fix the nav bar position */
+    top: 0; /* Position the nav bar at the top */
+    left: 0; /* Align the nav bar to the left */
+    height: 100%; /* Make the nav bar take full height of the viewport */
+    width: 100%; /* Make the nav bar take full width */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark transparent background */
+    transform: translateY(-100%); /* Initially hide the nav bar by translating it out of view */
+    transition: transform 0.3s ease; /* Smooth transition for showing/hiding the nav bar */
+    z-index: 9; /* Position the nav bar below the toggle button */
+}
+
+/* Show the nav bar when the 'show' class is added */
+.nav-bar.show {
+    transform: translateY(0); /* Bring the nav bar into view */
+}
+
+/* Styles for the nav bar list */
+.nav-bar ul {
+    list-style-type: none; /* Remove default list styles */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack the list items vertically */
+    align-items: center; /* Center align the items horizontally */
+    justify-content: center; /* Center the items vertically */
+    height: 100%; /* Make the list take full height of the nav bar */
+}
+
+/* Styles for each list item in the nav bar */
+.nav-bar ul li {
+    margin: 20px 0; /* Add vertical spacing between each item */
+}
+
+/* Styles for links in the nav bar */
+.nav-bar ul li a {
+    background-color: #7dc444; /* Set a green background for links */
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underlining */
+    font-size: 1.2rem; /* Increase font size */
+    padding: 10px 20px; /* Add padding around the links */
+    border-radius: 30px; /* Make the corners rounded */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Hover effects for nav bar links */
+.nav-bar ul li a:hover {
+    background-color: #fff; /* Change background to white on hover */
+    color: #7dc444; /* Change text color to green on hover */
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+
+/* Hero section styles */
+.hero-dicas {
+    background-image: url('fundoDicas.jpg'); /* Set the background image for the hero section */
+    background-size: cover; /* Cover the entire background area with the image */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Make the section take the full height of the viewport */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center-align the text */
+    color: #fff; /* White text color */
+    padding: 20px; /* Padding inside the section */
+}
+
+/* Styles for h1 elements */
+h1 {
+    font-size: 2.5rem; /* Set font size */
+    margin-bottom: 20px; /* Add space below the h1 */
+}
+
+/* Tips container styles */
+.dicas-container {
+    padding: 40px; /* Padding inside the container */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack the items vertically */
+    gap: 20px; /* Space between the items */
+}
+
+/* Tips list styles */
+.dicas-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
+
+/* Individual list item styles */
+.dicas-list li {
+    cursor: pointer; /* Change the cursor to pointer on hover */
+    background-color: #7dc444; /* Green background */
+    color: #000; /* Black text */
+    padding: 15px; /* Padding inside each list item */
+    margin: 10px 0; /* Vertical margin between items */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+/* Hover effect for list items */
+.dicas-list li:hover {
+    background-color: #5a9f33; /* Darker green background on hover */
+}
+
+/* Tip details section styles */
+.dica-details {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center-align the text */
+    margin-top: 20px; /* Space above the details section */
+}
+
+/* Tip image styles */
+.dica-img {
+    width: 300px; /* Set image width */
+    height: 200px; /* Set image height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* Instructions section styles */
+.instructions {
+    display: none; /* Initially hide the instructions */
+    margin-top: 10px; /* Space above the instructions */
+    background-color: rgb(255, 255, 255); /* White background */
+    padding: 10px; /* Padding inside the instructions box */
+    border-radius: 5px; /* Rounded corners */
+    color: #000; /* Black text inside the instructions */
+}
+
+/* Budget section styles */
+.orcamento-section {
+    text-align: center; /* Center-align the text */
+    margin-top: 40px; /* Space above the budget section */
+}
+
+/* Budget button styles */
+.orcamento-button {
+    background-color: #7dc444; /* Green background */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 30px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover effect for the budget button */
+.orcamento-button:hover {
+    background-color: #fff; /* Change background to white on hover */
+    color: #7dc444; /* Change text color to green on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: #5a9f33; /* Green background for the footer */
+    color: #000; /* Black text */
+    text-align: center; /* Center-align the text */
+    padding: 20px; /* Padding inside the footer */
+    width: 100%; /* Footer takes the full width of the page */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Add a shadow to the footer */
+}

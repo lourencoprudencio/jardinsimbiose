@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<!-- Declares the document type and version of HTML being used, in this case, HTML5 -->
+<html lang="pt"> 
+<!-- Starts the HTML document and specifies the language as Portuguese -->
+<head>
+    <meta charset="UTF-8"> 
+    <!-- Sets the character encoding for the document to UTF-8, allowing for a wide range of characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Sets the viewport to control the layout on mobile browsers, ensuring responsive design -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <!-- Ensures compatibility with Internet Explorer -->
+    <title>Dicas de Jardinagem - JardinSimbiose</title> 
+    <!-- Sets the title of the webpage, which appears in the browser tab -->
+    <link rel="icon" href="logo_jardinsimbiose.png" type="image/png"> 
+    <!-- Links to the favicon for the site, displayed in the browser tab -->
+    <link rel="stylesheet" href="dicas.css"> 
+    <!-- Links to the external CSS file for styling the webpage -->
+</head>
+<body>
+    <header class="main-header" id="mainHeader"> 
+    <!-- Defines the header section of the webpage with a class and ID for styling and JavaScript -->
+        <a href="https://www.instagram.com/nome_da_marca/" target="_blank"> 
+        <!-- Creates a hyperlink to the Instagram page that opens in a new tab -->
+            <img src="logo_jardinsimbiose.png" alt="Logotipo JardimSimbiose" class="logo"> 
+            <!-- Displays the logo image with an alt text for accessibility and a class for styling -->
+        </a>
+        <div class="menu-toggle" id="menuToggle"> 
+        <!-- Defines a div for the menu toggle button, which allows users to open or close the navigation menu -->
+            <div class="bar"></div> 
+            <!-- Creates a visual bar for the toggle button (part of a hamburger menu) -->
+            <div class="bar"></div> 
+            <!-- Creates another bar for the toggle button -->
+            <div class="bar"></div> 
+            <!-- Creates a third bar for the toggle button -->
+        </div>
+        <nav class="nav-bar" id="navBar"> 
+        <!-- Defines the navigation bar with a class and ID for styling and JavaScript -->
+            <ul>
+            <!-- Starts an unordered list for navigation items -->
+                <li><a href="inicio.html">Início</a></li> 
+                <!-- Navigation item linking to the homepage -->
+                <li><a href="servicos.html">Serviços</a></li> 
+                <!-- Navigation item linking to the services section on the same page -->
+                <li><a href="contactos.html">Contactos</a></li> 
+                <!-- Navigation item linking to the contact page -->
+                <li><a href="#portefolio">Portefólio</a></li> 
+                <!-- Navigation item linking to the portfolio section on the same page -->
+                <li><a href="dicas.html">Dicas de Jardinagem</a></li> 
+                <!-- Navigation item linking to the gardening tips section on the same page -->
+                <li><a href="orcamento.html" class="orcamento-button">Orçamento</a></li> 
+                <!-- Navigation item linking to the budget page with a specific class for styling -->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-dicas"> 
+    <!-- Defines a section for the hero area with gardening tips -->
+        <h1>Dicas de Jardinagem</h1> 
+        <!-- Main heading for the section -->
+        <p>Descubra como cuidar do seu jardim e mantê-lo sempre bonito e saudável!</p> 
+        <!-- Description paragraph providing a brief overview -->
+    </section>
+
+    <section class="dicas-container"> 
+    <!-- Defines a container for the tips section -->
+        <ul class="dicas-list"> 
+        <!-- Starts an unordered list for displaying tips -->
+            <li data-dica="1">Dica 1: Plantar no Momento Certo</li> 
+            <!-- List item for tip 1 with a custom data attribute for identification -->
+            <li data-dica="2">Dica 2: Preparar o Solo</li> 
+            <!-- List item for tip 2 -->
+            <li data-dica="3">Dica 3: Regar Corretamente</li> 
+            <!-- List item for tip 3 -->
+            <li data-dica="4">Dica 4: Adubar suas Plantas</li> 
+            <!-- List item for tip 4 -->
+            <li data-dica="5">Dica 5: Controle de Pragas</li> 
+            <!-- List item for tip 5 -->
+            <li data-dica="6">Dica 6: Podar as Plantas</li> 
+            <!-- List item for tip 6 -->
+            <li data-dica="7">Dica 7: Plantas Companheiras</li> 
+            <!-- List item for tip 7 -->
+            <li data-dica="8">Dica 8: Criação de um Jardim Sustentável</li> 
+            <!-- List item for tip 8 -->
+        </ul>
+
+        <div class="dica-details"> 
+        <!-- Defines a div for displaying the details of the selected tip -->
+            <img id="dicaImg" src="" alt="" class="dica-img" style="display:none;"> 
+            <!-- Image element for displaying the tip image; initially hidden -->
+            <p id="dicaInstructions" class="instructions" style="display:none;"></p> 
+            <!-- Paragraph element for displaying the tip instructions; initially hidden -->
+        </div>
+
+        <div class="orcamento-section"> 
+        <!-- Defines a section for requesting a custom budget -->
+            <h2>Precisa de mais ajuda?</h2> 
+            <!-- Subheading for the budget section -->
+            <p>Peça-nos um orçamento personalizado!</p> 
+            <!-- Description paragraph encouraging users to request a budget -->
+            <a href="orcamento.html" class="orcamento-button">Solicitar Orçamento</a> 
+            <!-- Button linking to the budget request page -->
+        </div>
+    </section>
+
+    <footer> 
+    <!-- Defines the footer of the webpage -->
+        <p>&copy; 2024 JardinSimbiose. Todos os direitos reservados.</p> 
+        <!-- Copyright notice for the website -->
+    </footer>
+
+    <script src="dicas.js"></script> 
+    <!-- Links to an external JavaScript file for interactivity and functionality -->
+</body>
+</html>
