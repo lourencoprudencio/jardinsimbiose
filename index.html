@@ -7,6 +7,26 @@
     <title>JardimSimbiose - Em Desenvolvimento</title> <!-- Set the title of the page -->
     <link rel="icon" href="logo_jardinsimbiose.png" type="image/png"> <!-- Set the favicon for the site -->
     <link rel="stylesheet" href="index.css"> <!-- Link to the external CSS stylesheet -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM fully loaded and parsed'); // Log when the DOM is fully loaded
+
+            const overlay = document.querySelector('.overlay'); // Select the overlay div
+            console.log('Overlay element selected:', overlay); // Log the selected overlay
+
+            const logo = document.querySelector('.logo'); // Select the logo image
+            console.log('Logo element selected:', logo); // Log the selected logo
+
+            const headerContainer = document.querySelector('.header-container'); // Select the header container
+            console.log('Header container selected:', headerContainer); // Log the selected header container
+
+            const btnEspreitar = document.querySelector('.btn-espreitar'); // Select the "Espreitar" button
+            console.log('Button "Espreitar" selected:', btnEspreitar); // Log the selected button
+
+            const footer = document.querySelector('footer'); // Select the footer
+            console.log('Footer element selected:', footer); // Log the selected footer
+        });
+    </script>
 </head>
 <body>
     <div class="overlay"> <!-- Overlay div for background and content -->
