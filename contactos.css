@@ -26,6 +26,10 @@ header.main-header {
     transition: background-color 0.3s ease; /* Smooth transition for background color changes */
 }
 
+.hero-contactos {
+    padding-top: 80px; /* Ajuste o valor conforme necessário */
+}
+
 header.main-header.scrolled {
     background-color: rgba(0, 0, 0, 0.8); /* Changes background color when scrolled */
 }
