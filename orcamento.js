@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Form Data:', Array.from(formData.entries())); // Logs the form data entries for verification
 
         // Send the form through EmailJS
-        emailjs.sendForm('service_3bxg4bc', 'template_2tgd85r', form) // Sends the form using EmailJS
+        emailjs.sendForm('service_56rlbrh', 'template_2tgd85r', form) // Sends the form using EmailJS
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text); // Logs success status and response text
                 document.getElementById("confirmationMessage").style.display = "block"; // Display confirmation message
