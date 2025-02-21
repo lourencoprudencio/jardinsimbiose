@@ -29,7 +29,7 @@ Não há uma data definida para a conclusão do projeto. Melhorias e novas funci
 
 ### 🔗 Links Úteis
 - [Site Oficial](https://www.jardinsimbiose.pt) *(Em desenvolvimento)*
-- [Repositório do Código](https://github.com/SEU_USUARIO/JardinSimbiose)
+- [Repositório do Código](https://github.com/lourencoprudencio/jardinsimbiose)
 
 ### 💡 Contribuições
 Sugestões e melhorias são bem-vindas! Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
@@ -65,7 +65,7 @@ There is no defined completion date for the project. Improvements and new featur
 
 ### 🔗 Useful Links
 - [Official Website](https://www.jardinsimbiose.pt) *(Under development)*
-- [Code Repository](https://github.com/SEU_USUARIO/JardinSimbiose)
+- [Code Repository](https://github.com/lourencoprudencio/jardinsimbiose)
 
 ### 💡 Contributions
 Suggestions and improvements are welcome! Feel free to open an *issue* or submit a *pull request*.
