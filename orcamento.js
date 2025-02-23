@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('orcamentoForm'); // Seleciona o formulário pelo ID
     const menuToggle = document.getElementById('menuToggle'); // Selects the menu toggle button by its ID
     const navBar = document.getElementById('navBar'); // Selects the navigation bar by its ID
+
     // Toggle menu visibility
     menuToggle.addEventListener('click', function() {
         navBar.classList.toggle('show'); // Adds or removes the 'show' class to display or hide the menu
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Menu closed on link click'); // Logs a message indicating the menu has been closed
         });
     });
+
     if (!form) {
         console.error('Erro: Formulário não encontrado. Verifica o ID "orcamentoForm" no HTML.');
         return;
