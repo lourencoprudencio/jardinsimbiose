@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "name": "jardinsimbiose",
+  "version": "1.0.0",
+  "description": "Bem-vindo ao repositório do **JardinSimbiose**, um projeto focado em soluções sustentáveis para jardinagem e paisagismo. Este projeto visa proporcionar uma experiência digital fluída e intuitiva para usuários interessados em serviços de jardinagem, orçamento online e informações úteis sobre práticas ecológicas.",
+  "main": "contactos.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lourencoprudencio/jardinsimbiose.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lourencoprudencio/jardinsimbiose/issues"
+  },
+  "homepage": "https://github.com/lourencoprudencio/jardinsimbiose#readme"
+}
